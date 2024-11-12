@@ -26,9 +26,17 @@ pipeline {
    stage("Deploy to staging ou Deployer en préproduction"){
    steps{
     sh "docker rm -f claculatrice || true"
-   sh "docker run -d --rm -p 8769:8080 --name claculatrice localhost:5000/calculatrice"
+   sh "docker run -d --rm -p 8882:8080 --name claculatrice localhost:5000/calculatrice"
  }
 }
-
-
+   stage("Acceptance test"){
+   steps{
+   sleep 60
+   sh "chmod +x acceptance_test.sh && ./acceptance_test.sh"
+ }
+}
+post{
+always{
+sh"docker stop calculatrice"
+}}
 }}
