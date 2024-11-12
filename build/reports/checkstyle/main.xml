@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/home/mr/acceptance2025/src/main/java/com/mariam/calculatrice/Calculatrice.java">
+</file>
+<file name="/home/mr/acceptance2025/src/main/java/com/mariam/calculatrice/CalculatriceController.java">
+</file>
+<file name="/home/mr/acceptance2025/src/main/java/com/mariam/calculatrice/CalculatriceApplication.java">
+</file>
+</checkstyle>
